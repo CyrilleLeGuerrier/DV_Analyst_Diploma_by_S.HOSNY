@@ -5,7 +5,7 @@ class my_subscriber extends uvm_subscriber #(my_sequence_item);
 
         //covergroups//
         // vlog: +cover
-        // vsim: -do "run 340; coverage report -codeAll -cvg -verbose" -coverage
+        // vsim: -do "run 340; coverage report -codeAll -cvg -verbose"Â -coverage
         covergroup group_1;
         cover_1: coverpoint sequence_item_subscriber.Data_in {bins bin_1[] = {[0:(2**DATA_WIDTH)-1]};}
         cover_2: coverpoint sequence_item_subscriber.Address {bins bin_1[] = {[0:(2**ADDR_WIDTH)-1]};}
