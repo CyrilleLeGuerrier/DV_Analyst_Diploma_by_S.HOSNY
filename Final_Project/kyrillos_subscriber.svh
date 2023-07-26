@@ -15,22 +15,13 @@ class my_subscriber extends uvm_subscriber #(my_sequence_item);
         cross_1: cross cover_1, cover_2;
         cross_2: cross cover_2, cover_4;
         endgroup
-
-
-
+        
         function new(input string name = "my_subscriber", uvm_component parent = null);
             super.new(name, parent);
             $display("my_subscriber");
             group_1 = new();
         endfunction
-
-
-
-
-
-
-
-
+        
         function void write (input my_sequence_item t); // The only function in uvm_analysis_port/imp/export class
             sequence_item_subscriber = t;
             $display("%p Data_out in my_subscriber", sequence_item_subscriber.Data_out);
